@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>test</title>
+    <link rel="stylesheet" href="/static/commons.css"/>
+</head>
+<body>
+    <form action="/login/" method="post" enctype="multipart/form-data">
+        <p>
+            <label for="username">用户名</label>
+            <input name="user" id="username" type="text" />
+        </p>
+        <p>
+            <label for="password">密码</label>
+            <input name="pwd" id="password" type="password"/>
+        </p>
+        <p>
+            男：<input type="radio" name="sex" value="1"/>
+            女：<input type="radio" name="sex" value="2"/>
+        </p>
+        <p>
+            篮球：<input type="checkbox" name="favi" value="1"/>
+            足球：<input type="checkbox" name="favi" value="2"/>
+        </p>
+        <p>
+            <select name="city" multiple>
+                <option value="sh">上海</option>
+                <option value="bj">北京</option>
+            </select>
+        </p>
+        <p>
+            <input type="file" name="fff"/>
+        </p>
+        <p>
+            <input type="submit" value="提交"/>
+            <span style="color: red">{{ error_msg }}</span>
+        </p>
+    </form>
+    <script src="/static/jquery.min.js"></script>
+
+</body>
+</html>
