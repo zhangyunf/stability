@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+    <!--
+    <ul>
+        {% for k, value in user_list_1.items %}
+            <li><a target="_blank" href="/detail?nid={{ k }}">{{ value.name }}</a></li>
+        {% endfor %}
+    </ul>
+    -->
+    <ul>
+        {% for k, value in user_list_1.items %}
+            <li><a target="_blank" href="/detail-{{ k }}.html">{{ value.name }}</a></li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
