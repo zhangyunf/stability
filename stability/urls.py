@@ -14,12 +14,12 @@ Including another URLconf
     2. Add stability URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, re_path
 from params import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/', views.index),
     path('login/', views.Login.as_view()),
     path('home/', views.home),
-    path(r'detail-(\d+).html', views.detail),
+    re_path('detail-(\d+).html', views.detail),
 ]

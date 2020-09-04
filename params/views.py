@@ -47,9 +47,8 @@ def index(request):
     return render(request, 'index.html', {"user_list_1": USER_LIST_1})
 
 def detail(request, nid):
-    return HttpResponse(nid)
-    # detail_info = USER_LIST_1[nid]
-    # return render(request, 'detail.html', {"detail_info": detail_info})
+    detail_info = USER_LIST_1[nid]
+    return render(request, 'detail.html', {"detail_info": detail_info})
 # CBV
 from django.views import View
 class Login(View):
